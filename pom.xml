@@ -9,6 +9,7 @@
     <version>1.0</version>
     <modules>
         <module>moyu-mall-common</module>
+        <module>moyu-mall-web-api</module>
     </modules>
 
     <name>moyu-mall</name>

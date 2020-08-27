@@ -1,0 +1,54 @@
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active: dev
+  jackson:
+    time-zone: GMT+8
+    serialization:
+      fail_on_empty_beans: false
+  data:
+    redis:
+      repositories:
+        enabled: false
+
+  #配置jpa
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: true
+  application:
+    name: xueden-boot-vue
+
+#登录图形验证码有效时间/分钟
+loginCode:
+  expiration: 2
+
+#邮箱验证码有效时间/分钟
+code:
+  expiration: 5
+
+#七牛云
+qiniu:
+  # 文件大小 /M
+  max-size: 15
+
+#会员登录有效期
+mall:
+  member:
+    session:
+      expire: 604800
+  header_cate: HEADER_CATE
+  product_home: PRODUCT_HOME
+  product_item: PRODUCT_ITEM
+  item_expire: 604800
+  cart_pre: CART
+  add_order: ADD_ORDER
+  order_pay: ORDER_PAY
+
+
+#密码加密传输，前端公钥加密，后端私钥解密
+rsa:
+  private_key: MIIBUwIBADANBgkqhkiG9w0BAQEFAASCAT0wggE5AgEAAkEA0vfvyTdGJkdbHkB8mp0f3FE0GYP3AYPaJF7jUd1M0XxFSE2ceK3k2kw20YvQ09NJKk+OMjWQl9WitG9pB6tSCQIDAQABAkA2SimBrWC2/wvauBuYqjCFwLvYiRYqZKThUS3MZlebXJiLB+Ue/gUifAAKIg1avttUZsHBHrop4qfJCwAI0+YRAiEA+W3NK/RaXtnRqmoUUkb59zsZUBLpvZgQPfj1MhyHDz0CIQDYhsAhPJ3mgS64NbUZmGWuuNKp5coY2GIj/zYDMJp6vQIgUueLFXv/eZ1ekgz2Oi67MNCk5jeTF2BurZqNLR3MSmUCIFT3Q6uHMtsB9Eha4u7hS31tj1UWE+D+ADzp59MGnoftAiBeHT7gDMuqeJHPL4b+kC+gzV4FGTfhR9q3tTbklZkD2A==

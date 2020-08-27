@@ -1,2 +1,2 @@
-# moyu-mall-web-api
-前台项目接口
+# moyu-mall
+墨鱼商城

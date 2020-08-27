@@ -3,12 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.xueden</groupId>
+    <groupId>cn.xueden.mall</groupId>
     <artifactId>moyu-mall</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
+    <modules>
+        <module>moyu-mall-common</module>
+    </modules>
 
-    <name>墨鱼商城-电商平台</name>
+    <name>moyu-mall</name>
+    <description>墨鱼商城父工程</description>
     <url>http://java.goodym.cn</url>
 
     <parent>

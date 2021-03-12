@@ -20,7 +20,7 @@ spring:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     open-in-view: true
   application:
-    name: xueden-boot-vue
+    name: moyu-mall
 
 #登录图形验证码有效时间/分钟
 loginCode:

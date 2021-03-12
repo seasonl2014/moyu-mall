@@ -4,7 +4,7 @@ spring:
     druid:
       db-type: com.alibaba.druid.pool.DruidDataSource
       driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-      url: jdbc:log4jdbc:mysql://localhost:3306/xueden_boot_vue?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false
+      url: jdbc:log4jdbc:mysql://192.168.56.10:3306/moyu_mall?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false
       username: root
       password: root
 
@@ -42,7 +42,7 @@ spring:
   redis:
     #数据库索引
     database: 0
-    host: 127.0.0.1
+    host: 192.168.56.10
     port: 6379
     password:
     #链接超时时间
@@ -50,7 +50,7 @@ spring:
 
   elasticsearch:
     rest:
-      uris: http://localhost:9200
+      uris: http://192.168.56.10:9200
 
 #jwt
 jwt:

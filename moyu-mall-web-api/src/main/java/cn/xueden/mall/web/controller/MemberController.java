@@ -1,8 +1,9 @@
 package cn.xueden.mall.web.controller;
 
 
-import cn.xueden.mall.domain.MallAddress;
-import cn.xueden.mall.domain.MallMember;
+
+import cn.xueden.mall.common.jpa.domain.MallAddress;
+import cn.xueden.mall.common.jpa.domain.MallMember;
 import cn.xueden.mall.web.service.MemberService;
 import cn.xueden.mall.web.service.dto.BaseResult;
 import cn.xueden.mall.web.service.dto.MemberDto;

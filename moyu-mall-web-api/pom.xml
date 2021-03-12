@@ -16,12 +16,82 @@
 
 
     <dependencies>
-        <!--导入公共模块-->
+        <!--导入公共核心模块-->
         <dependency>
             <groupId>cn.xueden.mall</groupId>
-            <artifactId>moyu-mall-common</artifactId>
-            <version>1.0</version>
+            <artifactId>moyu-mall-common-core</artifactId>
         </dependency>
+
+        <!--导入moyu-elasticsearch模块-->
+        <dependency>
+            <groupId>cn.xueden.mall</groupId>
+            <artifactId>moyu-mall-common-elasticsearch</artifactId>
+        </dependency>
+
+        <!--导入moyu-jpa模块-->
+        <dependency>
+            <groupId>cn.xueden.mall</groupId>
+            <artifactId>moyu-mall-common-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.xueden.mall</groupId>
+            <artifactId>moyu-mall-common-redis</artifactId>
+        </dependency>
+
+        <!--lombok插件-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!--mapStruct依赖-->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-jdk8</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!--Spring boot start-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--Spring boot end-->
+
+        <!-- RESTful APIs swagger2 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.swagger</groupId>
+                    <artifactId>swagger-annotations</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>io.swagger</groupId>
+                    <artifactId>swagger-models</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-models</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

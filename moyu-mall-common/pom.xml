@@ -10,10 +10,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>moyu-mall-common</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>moyu-mall-common</name>
     <description>墨鱼商城公共模块</description>
+    <modules>
+        <module>moyu-mall-common-jpa</module>
+        <module>moyu-mall-common-core</module>
+        <module>moyu-mall-common-elasticsearch</module>
+        <module>moyu-mall-common-redis</module>
+    </modules>
 
 
     <dependencies>
@@ -23,6 +29,55 @@
             <artifactId>hutool-all</artifactId>
             <version>${hutool.version}</version>
         </dependency>
+
+        <!--lombok插件-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!--apache.poi-->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+        </dependency>
+
+        <!--https://gitee.com/lionsoul/ip2region/tree/v1.4-release/-->
+        <dependency>
+            <groupId>org.lionsoul</groupId>
+            <artifactId>ip2region</artifactId>
+        </dependency>
+
+        <!--获取浏览器名称及版本号-->
+        <dependency>
+            <groupId>eu.bitwalker</groupId>
+            <artifactId>UserAgentUtils</artifactId>
+        </dependency>
+
+        <!-- commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <!--Spring boot start-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!--Spring boot end-->
+
     </dependencies>
 
 

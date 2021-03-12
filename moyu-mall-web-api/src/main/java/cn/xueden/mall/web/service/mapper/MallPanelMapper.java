@@ -1,7 +1,8 @@
 package cn.xueden.mall.web.service.mapper;
 
-import cn.xueden.mall.common.base.BaseMapper;
-import cn.xueden.mall.domain.MallPanel;
+
+import cn.xueden.mall.common.jpa.base.BaseMapper;
+import cn.xueden.mall.common.jpa.domain.MallPanel;
 import cn.xueden.mall.web.service.dto.TbPanelDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;

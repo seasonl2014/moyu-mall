@@ -1,12 +1,13 @@
 package cn.xueden.mall.web.service.impl;
 
 
-import cn.xueden.mall.common.utils.MapperUtil;
-import cn.xueden.mall.common.utils.RedisUtils;
-import cn.xueden.mall.domain.MallESItem;
-import cn.xueden.mall.domain.MallItem;
-import cn.xueden.mall.domain.MallItemCat;
-import cn.xueden.mall.domain.MallItemDesc;
+
+import cn.xueden.mall.common.core.utils.MapperUtil;
+import cn.xueden.mall.common.jpa.domain.MallESItem;
+import cn.xueden.mall.common.jpa.domain.MallItem;
+import cn.xueden.mall.common.jpa.domain.MallItemCat;
+import cn.xueden.mall.common.jpa.domain.MallItemDesc;
+import cn.xueden.mall.common.redis.utils.RedisUtils;
 import cn.xueden.mall.repository.MallItemCatRepository;
 import cn.xueden.mall.repository.MallItemDescRepository;
 import cn.xueden.mall.repository.MallItemElasticsearchRepository;
@@ -30,7 +31,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
-import org.springframework.data.elasticsearch.core.SearchResultMapper;
+/*import org.springframework.data.elasticsearch.core.SearchResultMapper;*/
 import org.springframework.data.elasticsearch.core.aggregation.AggregatedPage;
 import org.springframework.data.elasticsearch.core.aggregation.impl.AggregatedPageImpl;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
@@ -204,7 +205,7 @@ public class ProductServiceImpl implements ProductService {
         long total = 0L;
 
         // 按关键字查询
-        if (key != null) {
+       /* if (key != null) {
             AggregatedPage<MallESItem> esItems = elasticsearchTemplate.queryForPage(queryBuilder.build(), MallESItem.class, new SearchResultMapper() {
                 @Override
                 public <T> AggregatedPage<T> mapResults(SearchResponse response, Class<T> aClass, Pageable pageable) {
@@ -256,7 +257,7 @@ public class ProductServiceImpl implements ProductService {
                 esItemList = esItems.getContent();
             }
         }
-
+*/
         // 全部商品
         if (StringUtils.isBlank(key) && cid == null) {
             Iterable<MallESItem> esItems = itemElasticsearchRepository.search(queryBuilder.build());

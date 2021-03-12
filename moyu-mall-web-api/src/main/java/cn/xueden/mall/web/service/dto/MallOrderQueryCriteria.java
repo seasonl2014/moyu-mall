@@ -1,7 +1,8 @@
 package cn.xueden.mall.web.service.dto;
 
 
-import cn.xueden.mall.common.annotation.EnableXuedenQuery;
+
+import cn.xueden.mall.common.jpa.annotation.EnableXuedenQuery;
 import lombok.Data;
 
 /**功能描述：查询订单条件

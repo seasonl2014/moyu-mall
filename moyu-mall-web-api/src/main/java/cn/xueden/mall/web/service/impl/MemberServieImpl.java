@@ -1,8 +1,13 @@
 package cn.xueden.mall.web.service.impl;
 
-import cn.xueden.mall.common.utils.*;
-import cn.xueden.mall.domain.MallAddress;
-import cn.xueden.mall.domain.MallMember;
+
+import cn.xueden.mall.common.core.utils.MapperUtil;
+import cn.xueden.mall.common.core.utils.StringUtils;
+import cn.xueden.mall.common.core.utils.ValidationUtil;
+import cn.xueden.mall.common.core.utils.XuedenConstant;
+import cn.xueden.mall.common.jpa.domain.MallAddress;
+import cn.xueden.mall.common.jpa.domain.MallMember;
+import cn.xueden.mall.common.redis.utils.RedisUtils;
 import cn.xueden.mall.repository.MallAddressRepository;
 import cn.xueden.mall.repository.MallMemberRepository;
 import cn.xueden.mall.web.service.MemberService;

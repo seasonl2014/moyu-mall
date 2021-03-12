@@ -1,7 +1,8 @@
 package cn.xueden.mall.repository;
 
 
-import cn.xueden.mall.domain.MallESItem;
+
+import cn.xueden.mall.common.jpa.domain.MallESItem;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
 /**功能描述：Elasticsearch持久层

@@ -1,7 +1,8 @@
 package cn.xueden.mall.web.service.dto;
 
 
-import cn.xueden.mall.domain.MallAddress;
+
+import cn.xueden.mall.common.jpa.domain.MallAddress;
 import lombok.Data;
 
 import java.io.Serializable;

@@ -2,7 +2,8 @@ package cn.xueden.mall.repository;
 
 
 
-import cn.xueden.mall.domain.MallOrderShipping;
+
+import cn.xueden.mall.common.jpa.domain.MallOrderShipping;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

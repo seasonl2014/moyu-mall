@@ -1,7 +1,8 @@
 package cn.xueden.mall.web.service.dto;
 
 
-import cn.xueden.mall.domain.MallESItem;
+
+import cn.xueden.mall.common.jpa.domain.MallESItem;
 import lombok.Data;
 
 import java.util.List;

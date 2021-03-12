@@ -19,10 +19,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.5.RELEASE</version>
+        <version>2.3.4.RELEASE</version>
     </parent>
 
+
     <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <spring-boot.version>2.3.4.RELEASE</spring-boot.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -30,7 +34,8 @@
         <log4jdbc.version>1.16</log4jdbc.version>
         <swagger.version>2.9.2</swagger.version>
         <fastjson.version>1.2.54</fastjson.version>
-        <druid.version>1.1.10</druid.version>
+        <mysql.version>8.0.23</mysql.version>
+        <druid.version>1.2.5</druid.version>
         <commons-pool2.version>2.5.0</commons-pool2.version>
         <mapstruct.version>1.2.0.Final</mapstruct.version>
         <mail.version>1.4.7</mail.version>
@@ -42,27 +47,71 @@
         <json.version>20171018</json.version>
         <google-zxing.version>3.3.3</google-zxing.version>
         <yungouos-pay-sdk.version>1.1.2</yungouos-pay-sdk.version>
+        <lombok.version>1.18.18</lombok.version>
+        <xueden.mall.version>1.0</xueden.mall.version>
+        <commons.lang3.version>3.12.0</commons.lang3.version>
     </properties>
 
-    <dependencies>
+    <!-- 依赖声明 -->
+    <dependencyManagement>
+        <dependencies>
+
+            <!--自定义模块 start-->
+            <!--导入公共核心模块-->
+            <dependency>
+                <groupId>cn.xueden.mall</groupId>
+                <artifactId>moyu-mall-common-core</artifactId>
+                <version>${xueden.mall.version}</version>
+            </dependency>
+            <!--导入elasticsearch模块-->
+            <dependency>
+                <groupId>cn.xueden.mall</groupId>
+                <artifactId>moyu-mall-common-elasticsearch</artifactId>
+                <version>${xueden.mall.version}</version>
+            </dependency>
+
+            <!--导入moyu-jpa模块-->
+            <dependency>
+                <groupId>cn.xueden.mall</groupId>
+                <artifactId>moyu-mall-common-jpa</artifactId>
+                <version>${xueden.mall.version}</version>
+            </dependency>
+
+            <!--导入moyu-redis模块-->
+            <dependency>
+                <groupId>cn.xueden.mall</groupId>
+                <artifactId>moyu-mall-common-redis</artifactId>
+                <version>${xueden.mall.version}</version>
+            </dependency>
+
+            <!--自定义模块 end-->
 
         <!--Spring boot start-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-boot.version}</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
@@ -74,31 +123,37 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
+            <version>${spring-boot.version}</version>
             <scope>test</scope>
         </dependency>
         <!-- spring cache -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-cache</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
         <!-- redis -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
         <!-- websocket -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-websocket</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
         <!--模板引擎-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
         <!--Spring boot end-->
 
@@ -111,6 +166,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang3.version}</version>
         </dependency>
 
         <dependency>
@@ -174,7 +230,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
+            <version>${mysql.version}</version>
         </dependency>
 
         <!-- druid数据源驱动 -->
@@ -188,6 +244,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
             <optional>true</optional>
         </dependency>
 
@@ -311,6 +368,7 @@
 
 
     </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

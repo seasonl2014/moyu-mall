@@ -1,8 +1,9 @@
 package cn.xueden.mall.web.service.impl;
 
-import cn.xueden.mall.common.utils.MapperUtil;
-import cn.xueden.mall.common.utils.RedisUtils;
-import cn.xueden.mall.domain.MallItem;
+
+import cn.xueden.mall.common.core.utils.MapperUtil;
+import cn.xueden.mall.common.jpa.domain.MallItem;
+import cn.xueden.mall.common.redis.utils.RedisUtils;
 import cn.xueden.mall.repository.MallItemRepository;
 import cn.xueden.mall.web.service.CartService;
 import cn.xueden.mall.web.service.dto.BaseResult;

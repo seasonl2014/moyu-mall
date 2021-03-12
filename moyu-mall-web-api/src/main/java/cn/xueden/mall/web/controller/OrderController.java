@@ -1,7 +1,8 @@
 package cn.xueden.mall.web.controller;
 
-import cn.xueden.mall.common.utils.XuedenConstant;
-import cn.xueden.mall.domain.MallOrder;
+
+import cn.xueden.mall.common.core.utils.XuedenConstant;
+import cn.xueden.mall.common.jpa.domain.MallOrder;
 import cn.xueden.mall.web.service.OrderService;
 import cn.xueden.mall.web.service.dto.BaseResult;
 import cn.xueden.mall.web.service.dto.MallOrderQueryCriteria;

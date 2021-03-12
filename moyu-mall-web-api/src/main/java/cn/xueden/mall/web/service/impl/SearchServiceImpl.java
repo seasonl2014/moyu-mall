@@ -1,8 +1,9 @@
 package cn.xueden.mall.web.service.impl;
 
 
-import cn.xueden.mall.domain.MallESItem;
-import cn.xueden.mall.domain.MallItem;
+
+import cn.xueden.mall.common.jpa.domain.MallESItem;
+import cn.xueden.mall.common.jpa.domain.MallItem;
 import cn.xueden.mall.repository.MallItemElasticsearchRepository;
 import cn.xueden.mall.repository.MallItemRepository;
 import cn.xueden.mall.repository.MallOrderItemRepository;
